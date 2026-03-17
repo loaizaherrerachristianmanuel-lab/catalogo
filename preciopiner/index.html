@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Precios Distribuidor 2026 | Salsamentaria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23333" width="100" height="100"/><path fill="%23444" d="M0 0h50v50H0z"/><path fill="%23555" d="M50 50h50v50H50z"/></svg>');
+        }
+        
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background-color: #000000;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+            overflow: hidden;
+            border: 1px solid #8B0000;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B0000, #4a0000);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid #000000;
+        }
+        
+        .letter-header {
+            background-color: #111111;
+            color: #ffffff;
+            padding: 20px 30px;
+            border-bottom: 2px solid #8B0000;
+        }
+        
+        .letter-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        
+        .letter-date {
+            font-weight: bold;
+            color: #ff3333;
+        }
+        
+        .flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #000000;
+            color: #ff3333;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(255,0,0,0.3);
+            border: 1px solid #8B0000;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            color: #ffffff;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: #ff9999;
+        }
+        
+        .tagline {
+            font-style: italic;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            color: #ffcccc;
+            border: 1px solid #8B0000;
+        }
+        
+        .distributor-badge {
+            background-color: #8B0000;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+        
+        .greeting {
+            padding: 20px 30px;
+            background-color: #111111;
+            border-bottom: 1px solid #8B0000;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #dddddd;
+        }
+        
+        .greeting p {
+            margin-bottom: 15px;
+        }
+        
+        .greeting strong {
+            color: #ff3333;
+        }
+        
+        .info-bar {
+            background-color: #0a0a0a;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #8B0000;
+            background-color: #111111;
+            color: #ffffff;
+        }
+        
+        .last-update {
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+        
+        .price-note {
+            background-color: #8B0000;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+        
+        .increase-badge {
+            background-color: #000000;
+            color: #ff3333;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 5px;
+            font-weight: bold;
+            border: 1px solid #8B0000;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .btn-primary {
+            background-color: #8B0000;
+            color: white;
+            border: 1px solid #000000;
+        }
+        
+        .btn-primary:hover {
+            background-color: #660000;
+        }
+        
+        .btn-secondary {
+            background-color: #333333;
+            color: white;
+            border: 1px solid #8B0000;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #444444;
+        }
+        
+        .content {
+            padding: 30px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        /* ESTILOS PARA ESPACIOS DE IMÁGENES - VACÍOS */
+        .product-image-container {
+            width: 80px;
+            height: 80px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            float: left;
+            cursor: pointer;
+            border: 2px solid #8B0000;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-image-container:hover {
+            border-color: #ff3333;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+            background-color: #222222;
+        }
+        
+        .image-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: #8B0000;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .image-placeholder i {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: #8B0000;
+        }
+        
+        .image-placeholder span {
+            font-size: 0.7rem;
+            color: #666666;
+        }
+        
+        /* MODAL PARA IMAGEN AMPLIADA */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            border: 2px solid #8B0000;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+            border: 2px solid #8B0000;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: #8B0000;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            border: 1px solid #000000;
+        }
+        
+        .modal-close:hover {
+            background: #660000;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #ff3333;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8B0000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 1px 1px 2px rgba(255,0,0,0.3);
+        }
+        
+        .section-title i {
+            color: #8B0000;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            box-shadow: 0 3px 10px rgba(139, 0, 0, 0.2);
+            border: 1px solid #8B0000;
+        }
+        
+        .price-table th {
+            background-color: #8B0000;
+            color: white;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+            border-bottom: 2px solid #000000;
+        }
+        
+        .price-table td {
+            padding: 15px;
+            border-bottom: 1px solid #333333;
+            vertical-align: top;
+            background-color: #0a0a0a;
+            color: #dddddd;
+        }
+        
+        .price-table tr:nth-child(even) td {
+            background-color: #111111;
+        }
+        
+        .price-table tr:hover td {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .product-details {
+            font-size: 0.85rem;
+            color: #999999;
+            margin-top: 5px;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: #ff6666;
+            font-size: 1.2rem;
+            white-space: nowrap;
+        }
+        
+        .weight {
+            font-weight: 600;
+            color: #cccccc;
+            white-space: nowrap;
+        }
+        
+        .category {
+            margin-bottom: 50px;
+        }
+        
+        .note {
+            background-color: #111111;
+            border-left: 4px solid #8B0000;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 0 5px 5px 0;
+            color: #dddddd;
+            border: 1px solid #8B0000;
+        }
+        
+        .note h3 {
+            color: #ff3333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .note ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .note li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .note li:before {
+            content: "•";
+            color: #8B0000;
+            font-weight: bold;
+            position: absolute;
+            left: 5px;
+        }
+        
+        footer {
+            background-color: #0a0a0a;
+            color: #cccccc;
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 2px solid #8B0000;
+        }
+        
+        .share-link {
+            background-color: #111111;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            word-break: break-all;
+            border: 1px dashed #8B0000;
+            color: #dddddd;
+        }
+        
+        .share-link h3 {
+            color: #ff3333;
+            margin-bottom: 10px;
+        }
+        
+        .share-link a {
+            color: #ff9999;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .info-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .price-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .letter-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .product-image-container {
+                width: 60px;
+                height: 60px;
+                margin-right: 10px;
+            }
+            
+            .modal-close {
+                top: -50px;
+                right: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-image-container {
+                width: 50px;
+                height: 50px;
+                margin-right: 8px;
+            }
+        }
+        
+        .product-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        
+        .product-info {
+            flex: 1;
+        }
+        
+        .price-value {
+            font-size: 1.3rem;
+            color: #ff6666;
+        }
+        
+        .currency {
+            font-size: 0.9rem;
+            color: #999999;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #666666;
+            font-size: 0.8rem;
+            display: block;
+        }
+        
+        .price-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .distributor-tag {
+            background-color: #8B0000;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        
+        .empty-space-message {
+            color: #333333;
+            font-size: 0.6rem;
+            margin-top: 2px;
+        }
+
+        .note-warning {
+            background-color: #332211;
+            color: #ffaa66;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            border-left: 3px solid #ffaa66;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="letter-header">
+            <div class="letter-info">
+                <div class="letter-date">Bogotá, 06 de marzo del 2026</div>
+                <div><strong>LISTA DE PRECIOS DISTRIBUIDOR</strong> <span class="distributor-badge">Salsamentaria</span></div>
+            </div>
+        </div>
+        
+        <header>
+            <div class="flag">
+                <i class="fas fa-flag"></i> Hecho en Colombia
+            </div>
+            <h1><i class="fas fa-utensils"></i> Lista de Precios Salsamentaria</h1>
+            <p class="subtitle">Precios actualizados para distribuidores</p>
+            <div class="tagline">
+                <i class="fas fa-star"></i> Calidad y Sabor <i class="fas fa-star"></i>
+            </div>
+        </header>
+        
+        <div class="greeting">
+            <p><strong>Estimado Distribuidor:</strong></p>
+            <p>Agradecemos su interés por nuestra línea de productos. A continuación presentamos nuestra lista de precios mayoristas vigente para el año 2026.</p>
+            <p><i class="fas fa-camera"></i> <strong>Espacios para imágenes:</strong> Los cuadros rojos son espacios vacíos donde puedes agregar las imágenes de tus productos.</p>
+        </div>
+        
+        <div class="info-bar">
+            <div class="last-update">
+                <i class="fas fa-calendar-alt"></i> <strong>Precios vigentes 2026</strong> | <i class="fas fa-images"></i> Espacios disponibles para imágenes
+            </div>
+            <div class="price-note">
+                <i class="fas fa-exclamation-triangle"></i> Precios sujetos a variación
+            </div>
+            <div class="actions">
+                <button class="btn btn-secondary" id="printBtn">
+                    <i class="fas fa-print"></i> Imprimir
+                </button>
+                <button class="btn btn-primary" id="shareBtn">
+                    <i class="fas fa-share-alt"></i> Compartir
+                </button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- MODAL PARA IMAGEN AMPLIADA -->
+            <div class="modal-overlay" id="imageModal">
+                <div class="modal-content">
+                    <button class="modal-close" id="modalClose">&times;</button>
+                    <img id="modalImage" class="modal-image" src="" alt="Imagen ampliada">
+                </div>
+            </div>
+            
+            <!-- CATEGORÍA: CHORIZOS -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-drumstick-bite"></i> Chorizos</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Presentación</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-babativa-santarrosano-10und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO BABATIVA SANTAROSANO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">11.640</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-babativa-mini-santarrosano">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO BABATIVA MINI SANTAROSANO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.360</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-babativa-santarrosano-6und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO BABATIVA SANTAROSANO X 6 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.240</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-blanco">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO BLANCO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">950 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">14.640</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-coctelero">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO COCTELERO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-cuncia-mini">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO CUNCIA MINI X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-cuncia-tripa-natural">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO CUNCIA TRIPA NATURAL X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">13.920</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-cuncia">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO CUNCIA X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">13.920</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-cuncia-5und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO CUNCIA X 5 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-cerdo-granel">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO DE CERDO A GRANEL X 1 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">95 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">1.440</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-mexicano">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO MEXICANO X 5 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">400 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-mini-santarrosano">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO MINI SANTAROSANO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-parrillero-mini">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO PARRILLERO MINI X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-parrillero-10und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO PARRILLERO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">13.920</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-parrillero-5und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO PARRILLERO X 5 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-ranchero-10und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO RANCHERO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">800 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">15.840</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-ranchero-5und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO RANCHERO X 5 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">400 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">9.000</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-santa-eco-cuncia">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO SANTA ECO CUNCIA X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">11.640</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-santa-mini-eco-cuncia">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO SANTA MINI ECO CUNCIA X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.360</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-santarrosano-10und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO SANTAROSANO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">13.920</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-santarrosano-5und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO SANTAROSANO X 5 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="chorizo-santarrosano-6und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">CHORIZO SANTAROSANO X 6 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="santarrosano-especial">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">SANTAROSANO ESPECIAL X 10 UND ANDR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">11.641</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- CATEGORÍA: COSTILLA -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-drumstick-bite"></i> Costilla</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Peso Neto</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-250g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">250 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.840</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-300g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">300 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">7.800</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-350g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">350 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">9.360</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-400g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">400 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">10.320</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-450g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">11.400</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-500g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">12.600</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-2500g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">2.500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">66.000</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="costilla-2500g-gabr">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">COSTILLA GABR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">2.500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">60.000</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- CATEGORÍA: HAMBURGUESA -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-hamburger"></i> Hamburguesas</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Presentación</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="hamburguesa-especial-pura-carne">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">HAMBURGUESA ESPECIAL PURA CARNE PQT X 10 UND</div>
+                                        <div class="product-details">130g c/u</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">10 und</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">35.400</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="hamburguesa-preasada-6und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">HAMBURGUESA PREASADA X 6 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.960</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="hamburguesa-carne-caja">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">HAMBURGUESA CARNE CAJA X 30 UND</div>
+                                        <div class="product-details">120g c/u</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">30 und</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">52.200</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="hamburguesa-carne-paq">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">HAMBURGUESA CARNE PAQ X 10 UND</div>
+                                        <div class="product-details">120g c/u</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">10 und</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">17.400</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="hamburguesa-preasada-eco">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">HAMBURGUESA PREASADA ECO X 10 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">8.400</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- CATEGORÍA: JAMÓN -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-drumstick-bite"></i> Jamones</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Peso Neto</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="jamon-ahumado-450g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">JAMÓN AHUMADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.480</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="jamon-ahumado-1500g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">JAMÓN AHUMADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">21.240</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- CATEGORÍA: ESPECIALIDADES -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-star"></i> Especialidades</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Presentación</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="pavo-tajado">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">PAVO TAJADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">#VALOR!</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="pernil-cerdo-tajado">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">PERNIL DE CERDO TAJADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">#VALOR!</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="pierna-cerdo">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">PIERNA DE CERDO</div>
+                                        <div class="product-details">Precio variable por gramos</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">PV</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">#VALOR!</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="pollo-relleno">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">POLLO RELLENO</div>
+                                        <div class="product-details">Precio variable por gramos</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">PV</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">#VALOR!</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note-warning" style="margin-top: -30px; margin-bottom: 30px;">
+                    <i class="fas fa-exclamation-circle"></i> Los productos marcados con #VALOR! requieren consultar precio con su asesor comercial.
+                </div>
+            </div>
+            
+            <!-- CATEGORÍA: SALCHICHAS -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-hotdog"></i> Salchichas</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Presentación</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="salchicha-americana-15und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">SALCHICHA TIPO AMERICANA X 15 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.250 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">28.000</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="salchicha-americana-6und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">SALCHICHA TIPO AMERICANA X 6 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">9.000</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="salchicha-americana-12und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">SALCHICHA TIPO AMERICANA X 12 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.000 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">16.800</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="salchicha-desayuno">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">SALCHICHA TIPO DESAYUNO X 16 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">8.200</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="salchicha-americana-20und">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">SALCHICHA TIPO AMERICANA X 20 UND</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.650 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">32.400</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- CATEGORÍA: TOCINO / TOCINETA -->
+            <div class="category">
+                <h2 class="section-title"><i class="fas fa-bacon"></i> Tocineta</h2>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">Producto</th>
+                            <th width="15%">Peso Neto</th>
+                            <th width="20%">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-bola-estandar">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO BOLA ESTANDAR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.000 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">9.720</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-cali-450g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO CALI (CON ETIQUETA)</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.840</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-cali-900g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO CALI (CON ETIQUETA)</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">12.840</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-estandar-1000g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO ESTANDAR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.000 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">15.120</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-estandar-250g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO ESTANDAR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">250 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">2.520</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-estandar-450g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO ESTANDAR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">450 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">4.200</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-estandar-500g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO ESTANDAR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.840</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-estandar-900g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO ESTANDAR</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">900 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">8.040</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-premium-125g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO PREMIUM AHUMADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">125 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">3.600</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-premium-250g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO PREMIUM AHUMADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">250 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">6.360</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-premium-500g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO PREMIUM AHUMADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">11.520</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-premium-1000g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO PREMIUM AHUMADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.000 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">22.800</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-seleccionado-250g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO SELECCIONADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">250 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">4.440</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-seleccionado-500g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO SELECCIONADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">500 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">8.400</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="tocino-seleccionado-1000g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">TOCINO SELECCIONADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.000 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">16.560</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-header">
+                                    <div class="product-image-container" data-product="picado-1000g">
+                                        <div class="image-placeholder">
+                                            <i class="fas fa-camera"></i>
+                                            <span>Espacio para imagen</span>
+                                            <div class="empty-space-message">Haz clic para agregar</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <div class="product-name">PICADO</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="weight">1.000 g</td>
+                            <td>
+                                <div class="price-container">
+                                    <span class="price"><span class="currency">$</span><span class="price-value">99.000</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="note">
+                <h3><i class="fas fa-info-circle"></i> Notas importantes para distribuidores:</h3>
+                <ul>
+                    <li><strong>Precios mayoristas:</strong> Estos precios son exclusivos para distribuidores y pueden variar según volumen de compra.</li>
+                    <li><strong>Espacios para imágenes:</strong> Los cuadros rojos son espacios vacíos donde puedes agregar las imágenes de tus productos en el futuro.</li>
+                    <li><strong>Productos con precio #VALOR!:</strong> Estos productos requieren consultar precio con su asesor comercial.</li>
+                    <li><strong>Mínimo de compra:</strong> Pedido mínimo de $50.000 para entregas a domicilio.</li>
+                    <li><strong>Formas de pago:</strong> Efectivo, transferencia o tarjeta débito/crédito.</li>
+                </ul>
+            </div>
+            
+            <div class="share-link">
+                <h3><i class="fas fa-link"></i> Enlace para Compartir esta Lista de Precios:</h3>
+                <p>Comparte este enlace con tus distribuidores para mostrar nuestra lista de precios actualizada:</p>
+                <p><a href="#" id="currentLink">https://salsamentaria.com/lista-distribuidor-2026</a></p>
+                <p><small>Este enlace siempre mostrará la versión más actualizada de nuestra lista de precios mayoristas.</small></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p><i class="fas fa-flag"></i> <strong>SALSAMENTARIA - Hecho en Colombia con Orgullo</strong></p>
+            <p><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia | <i class="fas fa-phone"></i> Tel: (601) XXX-XXXX | <i class="fas fa-envelope"></i> ventas@salsamentaria.com</p>
+            <p>© 2026 Lista de Precios Distribuidor - Productos de Salsamentaria</p>
+        </footer>
+    </div>
+
+    <script>
+        // Inicializar funcionalidad de imágenes
+        function initImageFunctionality() {
+            const imageContainers = document.querySelectorAll('.product-image-container');
+            
+            // Configurar event listeners para contenedores de imágenes
+            imageContainers.forEach(container => {
+                // Al hacer clic en el contenedor (por ahora solo muestra un mensaje)
+                container.addEventListener('click', function() {
+                    alert('Espacio disponible para agregar imagen del producto. Puedes personalizar este espacio con tus propias fotos.');
+                });
+            });
+            
+            // Configurar el modal
+            document.getElementById('modalClose').addEventListener('click', closeModal);
+            
+            // Cerrar modal al hacer clic fuera de la imagen
+            document.getElementById('imageModal').addEventListener('click', (e) => {
+                if (e.target.id === 'imageModal') {
+                    closeModal();
+                }
+            });
+            
+            // Navegación con teclado
+            document.addEventListener('keydown', (e) => {
+                if (document.getElementById('imageModal').style.display === 'flex') {
+                    if (e.key === 'Escape') closeModal();
+                }
+            });
+        }
+        
+        // Cerrar modal
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Función para imprimir la página
+        document.getElementById('printBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.print();
+        });
+        
+        // Función para compartir
+        document.getElementById('shareBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Lista de Precios Distribuidor 2026 - Salsamentaria',
+                    text: 'Lista de precios mayoristas para distribuidores',
+                    url: window.location.href
+                });
+            } else {
+                // Copiar al portapapeles como alternativa
+                const link = document.getElementById('currentLink');
+                navigator.clipboard.writeText(link.href).then(() => {
+                    alert('¡Enlace copiado al portapapeles! Ahora puedes compartirlo con tus distribuidores.');
+                });
+            }
+        });
+        
+        // Mostrar el enlace actual en la página
+        document.getElementById('currentLink').textContent = window.location.href;
+        document.getElementById('currentLink').href = window.location.href;
+        
+        // Formatear números de precios con separadores de miles
+        document.querySelectorAll('.price-value').forEach(priceElement => {
+            // No formatear si dice "#VALOR!" o "Consultar"
+            if (priceElement.textContent === '#VALOR!' || priceElement.textContent === 'Consultar') return;
+            
+            let price = priceElement.textContent;
+            // Eliminar el signo de dólar si existe
+            price = price.replace('$', '').trim();
+            
+            // Formatear números que son solo dígitos
+            if (/^\d+$/.test(price)) {
+                const formatted = parseInt(price).toLocaleString('es-CO');
+                priceElement.textContent = formatted;
+            } else if (price.includes('.')) {
+                const parts = price.split('.');
+                if (parts[0].length > 3) {
+                    parts[0] = parseInt(parts[0]).toLocaleString('es-CO');
+                }
+                priceElement.textContent = parts.join('.');
+            }
+        });
+        
+        // Inicializar funcionalidad de imágenes cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', initImageFunctionality);
+    </script>
+</body>
+</html>
